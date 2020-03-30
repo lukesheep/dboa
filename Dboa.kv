@@ -1,0 +1,318 @@
+#:kivy 1.11.1
+#:import utils kivy.utils
+
+
+<Label>:
+    font_name: 'Roboto_Mono/RobotoMono-Regular'
+<Spinner>:
+    font_name: 'Roboto_Mono/RobotoMono-Regular'
+<TextInput>:
+    font_name: 'Roboto_Mono/RobotoMono-Regular'
+<SpinnerOption>:
+    color: utils.get_color_from_hex('#000000')
+    background_normal: ''
+    background_color: utils.get_color_from_hex('#bae6ff')
+
+<Janela>:
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (.3, 1)
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex('#4B5259')
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: 'Migration Report'
+            font_size: 22
+            size_hint_y: None
+            height: self.parent.height * 0.15
+            pos: self.parent.pos
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex('#000000')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            id: Connection_test_lb
+            font_size: 18
+            size_hint_y: None
+            height: self.parent.height * 0.1
+
+        Label:
+            id: source_lb
+            text_size: self.width, self.height
+            font_size: 18
+            halign: 'center'
+            size_hint_y: None
+            height: self.parent.height * 0.1
+        Label:
+            id: datatrans_lb
+            text_size: self.width, self.height
+            font_size: 18
+            halign: 'center'
+            size_hint_y: None
+            height: self.parent.height * 0.1
+        Label:
+            id: finished_lb
+            text_size: self.width, self.height
+            font_size: 18
+            halign: 'center'
+            size_hint_y: None
+            height: self.parent.height * 0.1
+        Widget:
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (.7, 1)
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex('#FFFFFF')
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            size_hint: (1, None)
+            text: "Dboa"
+            font_size: 150
+            height: self.parent.height * 0.15
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex('#42b3f5')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex('#289ce0')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            size_hint: (1, None)
+            height: 4
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            GridLayout:
+                cols: 4
+                spacing: [10,0]
+                padding: 0,20,0,0
+                Widget:
+                BoxLayout:
+                    orientation: 'vertical'
+                    spacing: 5
+                    Label:
+                        text: "Source Database"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Hostname"
+                        size_hint_y: None
+                        halign: 'right'
+                        valign: 'center'
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Port"
+                        size_hint_y: None
+                        halign: 'right'
+                        valign: 'center'
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Username"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Password"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Database"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Destination"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Hostname"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Port"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Username"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Password"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Label:
+                        text: "Database"
+                        halign: 'right'
+                        valign: 'center'
+                        size_hint_y: None
+                        height: 30
+                        text_size: self.size
+                        color: utils.get_color_from_hex('#000000')
+                    Widget:
+                BoxLayout:
+                    orientation: 'vertical'
+                    spacing: 5
+                    Spinner:
+                        id: source
+                        size_hint: None, None
+                        text:"Database"
+                        sync_height: True
+                        width: self.parent.width
+                        color: utils.get_color_from_hex('#000000')
+                        background_normal: 'spinner.png'
+                        height: 30
+                        border: utils.get_color_from_hex('#000000')
+                        values: 'Oracle','Postgres','SQL Server','MySQL','Mongo DB'
+                    TextInput:
+                        id: dbhost1
+                        text: "localhost"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbport1
+                        text: "localhost"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbuser1
+                        text: "alexjr"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbpass1
+                        text: "hakase22"
+                        size_hint_y: None
+                        multiline: False
+                        password: True
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: db1
+                        text: "employees"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    Spinner:
+                        id: destination
+                        size_hint: None, None
+                        text:"Database"
+                        sync_height: True
+                        width: self.parent.width
+                        color: utils.get_color_from_hex('#000000')
+                        background_normal: 'spinner.png'
+                        height: 30
+                        border: utils.get_color_from_hex('#000000')
+                        values: 'Oracle','Postgres','SQL Server','MySQL','Mongo DB'
+                    TextInput:
+                        id: dbhost2
+                        text: "localhost"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbhport2
+                        text: "localhost"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbuser2
+                        text: "alexjr"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: dbpass2
+                        text: "cotton"
+                        password: True
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    TextInput:
+                        id: db2
+                        text: "employees"
+                        size_hint_y: None
+                        multiline: False
+                        height: 30
+                        background_normal: 'textinput.png'
+                        padding: 6,6,6,6
+                    Button:
+                        size_hint_y: None
+                        height: 30
+                        text: "Migrate"
+                        on_press: root.migration()
+                    Widget:
+
+                Widget:
